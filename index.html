@@ -1,64 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lasagne</title>
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
-      background-color: #ffffff;
+      background: #ffffff;
       color: #333;
-      text-align: center;
     }
     header {
-      background-color: #009246;
-      color: white;
-      padding: 1em;
+      background: linear-gradient(to right, #008000, #ffffff, #ff0000); /* verde, branco e vermelho */
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    h1 {
+    header h1 {
+      font-size: 3rem;
       margin: 0;
-      font-size: 2.5em;
     }
-    .sub {
-      background-color: #CE2B37;
-      color: white;
-      padding: 0.5em;
-      font-weight: bold;
+    section {
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    .image-container img {
-      width: 100%;
-      max-width: 700px;
+    section img {
+      max-width: 100%;
       height: auto;
-      display: block;
-      margin: 2em auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
-    .texto {
-      max-width: 700px;
-      margin: 1em auto;
-      font-size: 1.2em;
-      line-height: 1.5;
+    section p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Lasagne</h1>
   </header>
-
-  <div class="sub">Autêntico sabor italiano, direto para sua mesa</div>
-
-  <div class="image-container">
-    <img src="lasanha.jpg" alt="Lasanha deliciosa">
-  </div>
-
-  <div class="texto">
-    Bem-vindo à <strong>Lasagne</strong>, onde cada fatia conta uma história de tradição e sabor.
-    Encomende a verdadeira lasanha artesanal e surpreenda-se com o melhor da cozinha italiana.
-  </div>
-
+  <section>
+    <img src="https://cdn.openai.com/chat-assets/user-lasagna-img.jpg" alt="Lasanha deliciosa"/>
+    <p>Sabor autêntico, receita artesanal, camadas de tradição. A lasanha que conquista.</p>
+  </section>
 </body>
 </html>
+
