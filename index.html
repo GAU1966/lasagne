@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lasagne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background-color: #ffffff;
-      color: #333;
+      font-family: 'Playfair Display', serif;
+      background-color: #fdfdfd;
+      color: #2e2e2e;
     }
 
     header {
-      background-color: white;
+      background-color: #b30000;
+      padding: 1rem;
+      text-align: center;
     }
-
-    .bandeira {
-      display: flex;
-      height: 10px;
-    }
-
-    .bandeira div {
-      flex: 1;
-    }
-
-    .verde { background-color: #008000; }
-    .branco { background-color: #ffffff; }
-    .vermelho { background-color: #ff0000; }
 
     header h1 {
-      text-align: center;
-      font-size: 3rem;
-      margin: 1rem 0;
-      color: #222;
+      margin: 0;
+      color: white;
+      font-size: 2.5rem;
     }
 
-    .intro {
+    .imagem-principal {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      display: block;
+    }
+
+    section.apresentacao {
+      background-color: #fdfdfd;
       text-align: center;
       padding: 2rem;
     }
 
-    .intro img {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    section.apresentacao h2 {
+      color: #b30000;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
     }
 
-    .intro p {
-      font-size: 1.4rem;
-      margin-top: 1rem;
+    section.apresentacao p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+      color: #1b5e20;
+    }
+
+    section.destacado {
+      background-color: #1b5e20;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #b30000;
+      color: white;
+      padding: 1rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="bandeira">
-      <div class="verde"></div>
-      <div class="branco"></div>
-      <div class="vermelho"></div>
-    </div>
     <h1>Lasagne</h1>
   </header>
 
-  <div class="intro">
-  <img src="lasanha.jpg" 
+  <img src="lasagna.jpg" alt="Lasanha artesanal" class="imagem-principal">
 
   <section class="apresentacao">
     <h2>Benvenuti alla Lasagne</h2>
@@ -89,13 +97,6 @@
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
   </footer>
 
-</body>
-</html>
-
-</body>
-
-
-  </div>
 </body>
 </html>
 
