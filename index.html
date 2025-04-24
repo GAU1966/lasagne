@@ -2,48 +2,73 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lasagne</title>
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
-      background: #ffffff;
+      background-color: #ffffff;
       color: #333;
     }
+
     header {
-      background: linear-gradient(to right, #008000, #ffffff, #ff0000); /* verde, branco e vermelho */
-      text-align: center;
-      padding: 2rem 1rem;
+      background-color: white;
     }
+
+    .bandeira {
+      display: flex;
+      height: 10px;
+    }
+
+    .bandeira div {
+      flex: 1;
+    }
+
+    .verde { background-color: #008000; }
+    .branco { background-color: #ffffff; }
+    .vermelho { background-color: #ff0000; }
+
     header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    section {
       text-align: center;
-      padding: 2rem 1rem;
+      font-size: 3rem;
+      margin: 1rem 0;
+      color: #222;
     }
-    section img {
-      max-width: 100%;
-      height: auto;
+
+    .intro {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .intro img {
+      width: 100%;
+      max-width: 720px;
       border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
     }
-    section p {
-      font-size: 1.2rem;
+
+    .intro p {
+      font-size: 1.4rem;
       margin-top: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
+    <div class="bandeira">
+      <div class="verde"></div>
+      <div class="branco"></div>
+      <div class="vermelho"></div>
+    </div>
     <h1>Lasagne</h1>
   </header>
-  <section>
-    <img src="https://cdn.openai.com/chat-assets/user-lasagna-img.jpg" alt="Lasanha deliciosa"/>
-    <p>Sabor autêntico, receita artesanal, camadas de tradição. A lasanha que conquista.</p>
-  </section>
+
+  <div class="intro">
+    <img src="lasanha.jpg" alt="Lasanha artesanal deliciosa">
+    <p>Receita artesanal, sabor autêntico. A lasanha mais amada da cidade!</p>
+  </div>
 </body>
 </html>
+
 
