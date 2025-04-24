@@ -7,13 +7,9 @@
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background-color: #ffffff;
+      font-family: 'Playfair Display', serif;
+      background-color: #fdfdfd;
       color: #333;
-    }
-
-    header {
-      background-color: white;
     }
 
     .bandeira {
@@ -29,11 +25,30 @@
     .branco { background-color: #ffffff; }
     .vermelho { background-color: #ff0000; }
 
-    header h1 {
+    header {
+      background-color: #b30000;
+      padding: 1rem;
       text-align: center;
-      font-size: 3rem;
-      margin: 1rem 0;
-      color: #222;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border: 2px solid white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
     }
 
     .intro {
@@ -51,50 +66,78 @@
     .intro p {
       font-size: 1.4rem;
       margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .alma {
+      background-color: #1b5e20;
+      color: white;
+    }
+
+    footer {
+      background-color: #b30000;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #25d366;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+
+  <div class="bandeira">
+    <div class="verde"></div>
+    <div class="branco"></div>
+    <div class="vermelho"></div>
+  </div>
+
   <header>
-    <div class="bandeira">
-      <div class="verde"></div>
-      <div class="branco"></div>
-      <div class="vermelho"></div>
-    </div>
     <h1>Lasagne</h1>
+    <nav>
+      <a href="cardapio.html">Cardápio</a>
+    </nav>
   </header>
 
   <div class="intro">
-  <img src="lasanha.jpg" alt="Lasanha artesanal deliciosa">
+    <img src="lasanha.jpg" alt="Lasanha artesanal deliciosa">
+  </div>
 
-    
- <body style="margin: 0; font-family: 'Playfair Display', serif; background-color: #fdfdfd;">
-
-  <header style="background-color: #b30000; padding: 1rem;">
-    <h1 style="color: white; text-align: center; margin: 0;">Lasagne</h1>
-  </header>
-
-  <section style="background-color: #fdfdfd; text-align: center; padding: 2rem; color: #1b5e20;">
-    <h2 style="font-size: 2rem;">Benvenuti alla Lasagne</h2>
-    <p style="font-size: 1.1rem; max-width: 600px; margin: auto; line-height: 1.6;">
+  <section>
+    <h2 style="font-size: 2rem; color: #1b5e20;">Benvenuti alla Lasagne</h2>
+    <p>
       Cada fatia da nossa lasanha é feita com carinho, camadas de tradição e generosidade.
     </p>
   </section>
 
-  <section style="background-color: #1b5e20; color: white; padding: 2rem;">
-    <h2 style="text-align: center;">Feita à mão, com alma italiana</h2>
-    <p style="max-width: 600px; margin: auto; line-height: 1.6;">
+  <section class="alma">
+    <h2>Feita à mão, com alma italiana</h2>
+    <p>
       Do forno direto pra sua mesa — com ingredientes frescos, amor e aquele toque especial que só quem ama o que faz sabe oferecer.
     </p>
   </section>
 
-  <footer style="background-color: #b30000; color: white; padding: 1rem; text-align: center;">
+  <footer>
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
+    <a class="whatsapp-button" href="https://wa.me/55SEUNUMERO" target="_blank">Fale com a gente no WhatsApp</a>
   </footer>
 
 </body>
-
-
-  </div>
-</body>
 </html>
+
