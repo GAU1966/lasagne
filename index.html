@@ -1,102 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lasagne</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #fdfdfd;
-      color: #2e2e2e;
+      font-family: sans-serif;
+      background-color: #ffffff;
+      color: #333;
     }
 
     header {
-      background-color: #b30000;
-      padding: 1rem;
-      text-align: center;
+      background-color: white;
     }
+
+    .bandeira {
+      display: flex;
+      height: 10px;
+    }
+
+    .bandeira div {
+      flex: 1;
+    }
+
+    .verde { background-color: #008000; }
+    .branco { background-color: #ffffff; }
+    .vermelho { background-color: #ff0000; }
 
     header h1 {
-      margin: 0;
-      color: white;
-      font-size: 2.5rem;
+      text-align: center;
+      font-size: 3rem;
+      margin: 1rem 0;
+      color: #222;
     }
 
-    .imagem-principal {
+    .intro {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .intro img {
       width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-      display: block;
+      max-width: 720px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
     }
 
-    section.apresentacao {
-      background-color: #fdfdfd;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    section.apresentacao h2 {
-      color: #b30000;
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-    }
-
-    section.apresentacao p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
-      color: #1b5e20;
-    }
-
-    section.destacado {
-      background-color: #1b5e20;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    footer {
-      background-color: #b30000;
-      color: white;
-      padding: 1rem;
-      text-align: center;
+    .intro p {
+      font-size: 1.4rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-
   <header>
+    <div class="bandeira">
+      <div class="verde"></div>
+      <div class="branco"></div>
+      <div class="vermelho"></div>
+    </div>
     <h1>Lasagne</h1>
   </header>
 
-  <img src="lasagna.jpg" alt="Lasanha artesanal" class="imagem-principal">
+  <div class="intro">
+  <img src="lasanha.jpg" alt="Lasanha artesanal deliciosa">
 
-  <section class="apresentacao">
-    <h2>Benvenuti</h2>
-    <p>
-      Aqui, cada receita é um gesto de afeto.  
-      Camadas de sabor feitas à mão com ingredientes frescos, tradição artesanal e um toque de generosidade.  
-      <br><br>
-      Do forno direto para a sua mesa, nosso propósito é entregar conforto, alegria e aquele cheirinho que lembra casa.
+    
+ <body style="margin: 0; font-family: 'Playfair Display', serif; background-color: #fdfdfd;">
+
+  <header style="background-color: #b30000; padding: 1rem;">
+    <h1 style="color: white; text-align: center; margin: 0;">Lasagne</h1>
+  </header>
+
+  <section style="background-color: #fdfdfd; text-align: center; padding: 2rem; color: #1b5e20;">
+    <h2 style="font-size: 2rem;">Sabor que abraça</h2>
+    <p style="font-size: 1.1rem; max-width: 600px; margin: auto; line-height: 1.6;">
+      Cada fatia da nossa lasanha é feita com carinho, camadas de tradição e generosidade.
     </p>
   </section>
 
-  <section class="destacado">
-    <h2>Feita com alma italiana</h2>
-    <p>
-      Do molho ao forno, tudo é preparado com dedicação.  
-      Um sabor autêntico para aquecer seus melhores momentos.
+  <section style="background-color: #1b5e20; color: white; padding: 2rem;">
+    <h2 style="text-align: center;">Feita à mão, com alma italiana</h2>
+    <p style="max-width: 600px; margin: auto; line-height: 1.6;">
+      Do forno direto pra sua mesa — com ingredientes frescos, amor e aquele toque especial que só quem ama o que faz sabe oferecer.
     </p>
   </section>
 
-  <footer>
+  <footer style="background-color: #b30000; color: white; padding: 1rem; text-align: center;">
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
   </footer>
 
+</body>
+
+
+  </div>
 </body>
 </html>
 
