@@ -38,33 +38,23 @@
       color: white;
       font-size: 2rem;
       margin: 0;
-      padding-left: 1rem;
     }
 
     nav {
       display: flex;
-      gap: 1rem;
-      margin-right: 1rem;
+      gap: 0.8rem;
       flex-wrap: wrap;
     }
 
-    nav a {
+    nav a, .glf-button {
       text-decoration: none;
       color: white;
       font-weight: bold;
       border: 2px solid white;
       padding: 0.4rem 0.8rem;
       border-radius: 5px;
-    }
-
-    nav .glf-nav-btn {
       background-color: orange;
-      color: white;
-      border: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      font-weight: bold;
-      text-decoration: none;
+      cursor: pointer;
     }
 
     .intro {
@@ -79,6 +69,15 @@
       box-shadow: 0 0 12px rgba(0,0,0,0.2);
     }
 
+    .intro p {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: bold;
+    }
+
     section {
       text-align: center;
       padding: 2rem;
@@ -89,51 +88,34 @@
       color: white;
     }
 
-    .whatsapp-fixo {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-    }
-
-    .whatsapp-fixo a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #25d366;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      text-decoration: none;
-      font-size: 28px;
-    }
-
-    .frase-destaque {
-      font-size: 1.4rem;
-      font-weight: bold;
-      max-width: 600px;
-      margin: 1rem auto;
-    }
-
     footer {
       background-color: #b30000;
       color: white;
-      padding: 2rem 1rem;
+      padding: 1rem;
       text-align: center;
     }
 
-    footer .glf-footer-btn {
-      margin-top: 1rem;
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-float i {
+      margin-top: 15px;
     }
   </style>
-
-  <!-- Ícone do WhatsApp -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Script do botão GlóriaFood -->
-  <script type="text/javascript" src="https://www.lasagne.com.br/js/gloriafood.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 </head>
 <body>
 
@@ -147,9 +129,8 @@
     <h1>Lasagne</h1>
     <nav>
       <a href="cardapio.html">Cardápio</a>
-      <a href="#">Área de entrega</a>
-      <!-- Botão GlóriaFood no topo -->
-      <a class="glf-nav-btn" href="https://www.lasagne.com.br/menu" target="_blank">Ver cardápio e pedir</a>
+      <a href="#">Área de Entrega</a>
+      <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Peça Agora!</span>
       <a href="#">Contato</a>
     </nav>
   </header>
@@ -160,12 +141,12 @@
 
   <section>
     <h2 style="font-size: 2rem; color: #1b5e20;">Benvenuti alla Lasagne</h2>
-    <p class="frase-destaque">
+    <p>
       Cada fatia da nossa lasanha é feita com carinho, camadas de tradição e generosidade.
     </p>
-
-    <!-- Botão GlóriaFood abaixo de "Benvenuti" -->
-    <div id="glf-button" class="glf-button" data-glf-cuid="9a2eb5b7-c87c-4df8-a8b1-b6900e4b15cb" data-glf-ruid="14b08c23-c1f7-4c8d-b97f-624e263ca5f4" style="margin-top: 20px;"></div>
+    <div style="margin-top: 1rem;">
+      <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Peça Agora!</span>
+    </div>
   </section>
 
   <section class="alma">
@@ -177,16 +158,14 @@
 
   <footer>
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
-    <!-- Botão GlóriaFood no rodapé -->
-    <div id="glf-button-footer" class="glf-button glf-footer-btn" data-glf-cuid="9a2eb5b7-c87c-4df8-a8b1-b6900e4b15cb" data-glf-ruid="14b08c23-c1f7-4c8d-b97f-624e263ca5f4"></div>
+    <div style="margin-top: 1rem;">
+      <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Peça Agora!</span>
+    </div>
   </footer>
 
-  <!-- Botão fixo do WhatsApp -->
-  <div class="whatsapp-fixo">
-    <a href="https://wa.me/555185770342" target="_blank" title="Fale com a gente no WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-  </div>
+  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
