@@ -57,6 +57,16 @@
       border-radius: 5px;
     }
 
+    nav .glf-nav-btn {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
     .intro {
       text-align: center;
       padding: 2rem;
@@ -100,17 +110,6 @@
       font-size: 28px;
     }
 
-    .gloriafood-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background-color: orange;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
     .frase-destaque {
       font-size: 1.4rem;
       font-weight: bold;
@@ -124,10 +123,17 @@
       padding: 2rem 1rem;
       text-align: center;
     }
+
+    footer .glf-footer-btn {
+      margin-top: 1rem;
+    }
   </style>
 
   <!-- Ícone do WhatsApp -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Script do botão GlóriaFood -->
+  <script type="text/javascript" src="https://www.lasagne.com.br/js/gloriafood.js"></script>
 </head>
 <body>
 
@@ -142,7 +148,8 @@
     <nav>
       <a href="cardapio.html">Cardápio</a>
       <a href="#">Área de entrega</a>
-      <a href="https://www.lasagne.com.br/menu" target="_blank">Ver cardápio e pedir</a>
+      <!-- Botão GlóriaFood no topo -->
+      <a class="glf-nav-btn" href="https://www.lasagne.com.br/menu" target="_blank">Ver cardápio e pedir</a>
       <a href="#">Contato</a>
     </nav>
   </header>
@@ -153,12 +160,12 @@
 
   <section>
     <h2 style="font-size: 2rem; color: #1b5e20;">Benvenuti alla Lasagne</h2>
-
     <p class="frase-destaque">
       Cada fatia da nossa lasanha é feita com carinho, camadas de tradição e generosidade.
     </p>
 
-    <a class="gloriafood-button" href="https://www.lasagne.com.br/menu" target="_blank">Ver cardápio e pedir</a>
+    <!-- Botão GlóriaFood abaixo de "Benvenuti" -->
+    <div id="glf-button" class="glf-button" data-glf-cuid="9a2eb5b7-c87c-4df8-a8b1-b6900e4b15cb" data-glf-ruid="14b08c23-c1f7-4c8d-b97f-624e263ca5f4" style="margin-top: 20px;"></div>
   </section>
 
   <section class="alma">
@@ -170,7 +177,8 @@
 
   <footer>
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
-    <a class="gloriafood-button" href="https://www.lasagne.com.br/menu" target="_blank">Ver cardápio e pedir</a>
+    <!-- Botão GlóriaFood no rodapé -->
+    <div id="glf-button-footer" class="glf-button glf-footer-btn" data-glf-cuid="9a2eb5b7-c87c-4df8-a8b1-b6900e4b15cb" data-glf-ruid="14b08c23-c1f7-4c8d-b97f-624e263ca5f4"></div>
   </footer>
 
   <!-- Botão fixo do WhatsApp -->
