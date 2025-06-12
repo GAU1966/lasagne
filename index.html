@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lasagne</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -17,45 +19,39 @@
       height: 10px;
     }
 
-    .bandeira div {
-      flex: 1;
-    }
-
+    .bandeira div { flex: 1; }
     .verde { background-color: #008000; }
     .branco { background-color: #ffffff; }
     .vermelho { background-color: #ff0000; }
 
     header {
       background-color: #b30000;
-      padding: 1rem;
+      padding: 1rem 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      align-items: center;
     }
 
-    header h1 {
-      color: white;
+    .logo {
       font-size: 2rem;
-      margin: 0;
-      padding-left: 1rem;
-    }
-
-    nav {
-      display: flex;
-      gap: 1rem;
-      padding-right: 1rem;
-      flex-wrap: wrap;
+      color: white;
+      font-weight: bold;
     }
 
     nav a {
+      margin-left: 1rem;
       text-decoration: none;
       color: white;
       font-weight: bold;
       border: 2px solid white;
       padding: 0.4rem 0.8rem;
       border-radius: 5px;
-      white-space: nowrap;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: white;
+      color: #b30000;
     }
 
     .intro {
@@ -71,8 +67,9 @@
     }
 
     .intro p {
-      font-size: 1.4rem;
-      margin-top: 1rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-top: 1.2rem;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
@@ -88,33 +85,66 @@
       color: white;
     }
 
+    .action-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00875f;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .action-button:hover {
+      background-color: #006e4d;
+    }
+
     footer {
       background-color: #b30000;
       color: white;
-      padding: 1rem;
+      padding: 1.5rem;
       text-align: center;
     }
 
-    .whatsapp-button {
+    /* Botão WhatsApp flutuante */
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 50%;
       width: 60px;
       height: 60px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
       z-index: 1000;
+      cursor: pointer;
     }
 
-    .whatsapp-button:hover {
-      background-color: #1ebe5d;
+    .whatsapp-float i {
+      margin-top: 16px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.3rem 0;
+      }
     }
   </style>
 </head>
@@ -127,24 +157,23 @@
   </div>
 
   <header>
-    <h1>Lasagne</h1>
+    <div class="logo">Lasagne</div>
     <nav>
       <a href="cardapio.html">Cardápio</a>
-      <a href="entrega.html">Área de entrega</a>
-      <a href="pedir.html">Ver cardápio e pedir</a>
-      <a href="contato.html">Contato</a>
+      <a href="#">Área de Entrega</a>
+      <a href="https://www.seulinkdogloriafood.com" target="_blank">Ver Cardápio e Pedir</a>
+      <a href="#">Contato</a>
     </nav>
   </header>
 
   <div class="intro">
     <img src="lasanha.jpg" alt="Lasanha artesanal deliciosa">
+    <p>Cada fatia da nossa lasanha é feita com carinho, camadas de tradição e generosidade.</p>
   </div>
 
   <section>
     <h2 style="font-size: 2rem; color: #1b5e20;">Benvenuti alla Lasagne</h2>
-    <p>
-      Cada fatia da nossa lasanha é feita com carinho, camadas de tradição e generosidade.
-    </p>
+    <a class="action-button" href="https://www.seulinkdogloriafood.com" target="_blank">Ver Cardápio e Pedir</a>
   </section>
 
   <section class="alma">
@@ -156,11 +185,13 @@
 
   <footer>
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
+    <a class="action-button" href="https://www.seulinkdogloriafood.com" target="_blank">Ver Cardápio e Pedir</a>
   </footer>
 
-  <a class="whatsapp-button" href="https://wa.me/555185770342" target="_blank" title="Fale com a gente no WhatsApp">
-    💬
+  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank" aria-label="Fale com a gente no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
   </a>
 
 </body>
 </html>
+
