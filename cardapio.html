@@ -29,8 +29,8 @@
       margin-top: 0.5rem;
     }
 
-    nav a {
-      margin: 0 1rem;
+    nav a, nav span.glf-button {
+      margin: 0 0.5rem;
       color: white;
       text-decoration: none;
       font-weight: bold;
@@ -38,11 +38,13 @@
       padding: 0.3rem 0.8rem;
       border-radius: 5px;
       transition: background 0.3s;
+      display: inline-block;
     }
 
-    nav a:hover {
+    nav a:hover, nav span.glf-button:hover {
       background-color: white;
       color: #b30000;
+      cursor: pointer;
     }
 
     main {
@@ -97,7 +99,6 @@
       color: white;
       border-radius: 5px;
       font-weight: bold;
-      cursor: pointer;
     }
   </style>
 </head>
@@ -108,10 +109,23 @@
     <nav>
       <a href="index.html">Início</a>
       <a href="cardapio.html">Cardápio</a>
+      <!-- Botão GlóriaFood no menu -->
+      <span class="glf-button"
+        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+        Ver cardápio e pedir
+      </span>
     </nav>
   </header>
 
   <main>
+    <!-- Botão GlóriaFood antes da frase "Nosso Cardápio" -->
+    <span class="glf-button"
+      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+      Ver cardápio e pedir
+    </span>
+
     <h2>Nosso Cardápio</h2>
     <ul>
       <li><strong>Da Nonna</strong><br>bolonhesa, bechamel, muçarela.</li>
@@ -126,10 +140,9 @@
 
   <footer>
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
-
     <a class="whatsapp-button" href="https://wa.me/555185770342" target="_blank">Peça agora por WhatsApp</a><br>
 
-    <!-- Botão GlóriaFood -->
+    <!-- Botão GlóriaFood no rodapé -->
     <span class="glf-button"
       data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
       data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
@@ -139,10 +152,6 @@
 
   <!-- Script GlóriaFood -->
   <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
-
-</body>
-</html>
-  </footer>
 
 </body>
 </html>
