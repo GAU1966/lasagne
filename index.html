@@ -28,27 +28,34 @@
     header {
       background-color: #b30000;
       padding: 1rem;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     header h1 {
       color: white;
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
+      font-size: 2rem;
+      margin: 0;
+      padding-left: 1rem;
     }
 
     nav {
-      margin-top: 1rem;
+      display: flex;
+      gap: 1rem;
+      padding-right: 1rem;
+      flex-wrap: wrap;
     }
 
     nav a {
-      margin: 0 1rem;
       text-decoration: none;
       color: white;
       font-weight: bold;
       border: 2px solid white;
       padding: 0.4rem 0.8rem;
       border-radius: 5px;
+      white-space: nowrap;
     }
 
     .intro {
@@ -89,14 +96,25 @@
     }
 
     .whatsapp-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
       background-color: #25d366;
       color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
     }
   </style>
 </head>
@@ -112,6 +130,9 @@
     <h1>Lasagne</h1>
     <nav>
       <a href="cardapio.html">Cardápio</a>
+      <a href="entrega.html">Área de entrega</a>
+      <a href="pedir.html">Ver cardápio e pedir</a>
+      <a href="contato.html">Contato</a>
     </nav>
   </header>
 
@@ -135,9 +156,11 @@
 
   <footer>
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
-    <a class="whatsapp-button" href="https://wa.me/555185770342" target="_blank">Fale com a gente no WhatsApp</a>
   </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/555185770342" target="_blank" title="Fale com a gente no WhatsApp">
+    💬
+  </a>
 
 </body>
 </html>
-
