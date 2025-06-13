@@ -23,7 +23,6 @@
 
     .verde { background-color: #008000; }
     .branco { background-color: #ffffff; }
-    .vermelho { background-color: #ff0000; }
 
     header {
       background-color: #b30000;
@@ -62,52 +61,40 @@
       border: 2px solid orange;
     }
 
-    .intro {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .intro img {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    }
-
-    .intro p {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-top: 1rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
     section {
-      text-align: center;
       padding: 2rem;
     }
 
-    .alma {
-      background-color: #1b5e20;
-      color: white;
+    section h2 {
+      text-align: center;
     }
 
-    .alma p {
-      font-size: 1.3rem;
+    .cardapio-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 1.5rem;
     }
 
-    .glf-button {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: orange;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 1rem;
+    .cardapio-item img {
+      width: 120px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .cardapio-item-texto {
+      max-width: 800px;
+    }
+
+    .cardapio-item-texto h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .cardapio-item-texto p {
+      margin: 0.2rem 0;
     }
 
     footer {
@@ -143,13 +130,12 @@
   <div class="bandeira">
     <div class="verde"></div>
     <div class="branco"></div>
-    <div class="vermelho"></div>
+    <div class="verde"></div>
   </div>
 
   <header>
     <a href="index.html" class="logo" style="font-family: 'Playfair Display', serif; font-size: 2rem; color: white; text-decoration: none; font-weight: bold;">Lasagne</a>
     <nav>
-      
       <a href="entrega.html">Área de Entrega</a>
       <span class="glf-button"
         data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
@@ -162,10 +148,32 @@
 
   <section>
     <h2>Nosso Cardápio</h2>
-    <p>Aqui você encontra todas as nossas lasanhas artesanais feitas com carinho e tradição italiana.</p>
 
-    <!-- Outro botão central GlóriaFood se quiser -->
-    <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Ver Cardápio e Pedir</span>
+    <!-- Cada bloco abaixo representa um item -->
+    <div class="cardapio-item">
+      <img src="sua-imagem.jpg" alt="Da Nonna">
+      <div class="cardapio-item-texto">
+        <h3>Da Nonna</h3>
+        <p>Um abraço de lasanha: simples, clássica, como aquela que só a vó sabe fazer. → Receita clássica de ragù alla bolognese com carne moída bovina e suína, sofrito, tomate e vinho. Cozido longo e suave, com bechamel e muito muçarela.</p>
+        <p><strong>1Kg - R$000,00</strong> | <strong>500g – R$000,00</strong></p>
+        <p><em>OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.</em></p>
+      </div>
+    </div>
+
+    <!-- Copie esse bloco e altere para cada item -->
+    <div class="cardapio-item">
+      <img src="sua-imagem.jpg" alt="Da Serra">
+      <div class="cardapio-item-texto">
+        <h3>Da Serra</h3>
+        <p>Farto, saboroso e tradicional. → Ragù alla bolognese clássico com presunto, bechamel e muçarela. Receita farta e reconfortante como as mesas da Serra Gaúcha.</p>
+        <p><strong>1Kg - R$000,00</strong> | <strong>500g – R$000,00</strong></p>
+        <p><em>OS PRODUTOS CONTÊM GLÚTEN E LACTOSE.</em></p>
+      </div>
+    </div>
+
+    <!-- Adicione os outros itens seguindo esse mesmo padrão... -->
+    <!-- Della Colonia, Prociutto e Formaggio, Broccoli e Ricotta, Alla Norma, Filetto e Funghi al Vino, Napoletana, Carbonara al Forno -->
+
   </section>
 
   <footer>
@@ -174,14 +182,12 @@
   </footer>
 
   <!-- WhatsApp flutuante -->
- <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 32px; height: 32px;">
-</a>
-
+  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
 
   <!-- Script do GlóriaFood -->
   <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
 </body>
 </html>
-
