@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lasagne</title>
+  <title>Cardápio | Lasagne</title>
   <style>
     body {
       margin: 0;
@@ -27,87 +27,43 @@
 
     header {
       background-color: #b30000;
-      padding: 0.8rem 1rem;
+      padding: 1rem 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
     }
 
-    header h1 {
-      color: white;
+    .logo a {
       font-size: 2rem;
-      margin: 0;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
 
     nav {
       display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+      gap: 1rem;
     }
 
-    nav a, nav span.glf-button {
+    nav .menu-link {
       text-decoration: none;
       color: white;
       font-weight: bold;
+      padding: 0.4rem 0.8rem;
       border: 2px solid white;
-      padding: 0.2rem 0.6rem;
       border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
+      font-size: 0.95rem;
     }
 
-    nav span.glf-button {
-      background-color: orange;
-      border: 2px solid orange;
-    }
-
-    .intro {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .intro img {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    }
-
-    .intro p {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-top: 1rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+    nav .gloriafood-button {
+      background-color: #ff6600;
+      border-color: #ff6600;
     }
 
     section {
       text-align: center;
       padding: 2rem;
-    }
-
-    .alma {
-      background-color: #1b5e20;
-      color: white;
-    }
-
-    .alma p {
-      font-size: 1.3rem;
-    }
-
-    .glf-button {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: orange;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 1rem;
     }
 
     footer {
@@ -117,41 +73,42 @@
       text-align: center;
     }
 
+    /* GlóriaFood botão central extra (se desejar) */
+    .glf-button {
+      display: inline-block;
+      background-color: #ff6600;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* WhatsApp fixo */
     .whatsapp-float {
       position: fixed;
+      width: 60px;
+      height: 60px;
       bottom: 20px;
       right: 20px;
       background-color: #25d366;
       color: white;
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      z-index: 999;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 100;
     }
 
-    .whatsapp-float img {
-      width: 32px;
-      height: 32px;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-top: 0.5rem;
-      }
+    .whatsapp-float i {
+      margin-top: 15px;
     }
   </style>
+  <!-- Ícone oficial do WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -162,18 +119,13 @@
   </div>
 
   <header>
-    <a href="index.html" class="logo">Lasagne</a>
+    <div class="logo">
+      <a href="index.html">Lasagne</a>
+    </div>
     <nav>
-      <a href="cardapio.html">Cardápio</a>
-      <a href="entrega.html">Área de Entrega</a>
-      <a class="highlight">
-        <span class="glf-button" 
-              data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-              data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-          Ver Cardápio e Pedir
-        </span>
-      </a>
-      <a href="contato.html">Contato</a>
+      <a class="menu-link" href="cardapio.html">Cardápio</a>
+      <a class="menu-link" href="entrega.html">Área de Entrega</a>
+      <span class="menu-link gloriafood-button glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Ver Cardápio e Pedir</span>
     </nav>
   </header>
 
