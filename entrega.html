@@ -2,9 +2,8 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Área de Entrega - Lasagne</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área de Entrega</title>
   <style>
     body {
       margin: 0;
@@ -18,10 +17,7 @@
       height: 10px;
     }
 
-    .bandeira div {
-      flex: 1;
-    }
-
+    .bandeira div { flex: 1; }
     .verde { background-color: #008000; }
     .branco { background-color: #ffffff; }
     .vermelho { background-color: #ff0000; }
@@ -35,10 +31,10 @@
       flex-wrap: wrap;
     }
 
-    header a.logo {
+    .logo {
+      font-size: 2rem;
       color: white;
       text-decoration: none;
-      font-size: 2rem;
       font-weight: bold;
     }
 
@@ -53,50 +49,54 @@
       color: white;
       font-weight: bold;
       border: 2px solid white;
-      padding: 0.3rem 0.6rem;
+      padding: 0.4rem 0.8rem;
       border-radius: 5px;
       font-size: 0.95rem;
     }
 
-    .content {
+    .highlight {
+      background-color: #ff6600;
+      border-color: #ff6600;
+    }
+
+    main {
       padding: 2rem;
       text-align: center;
     }
 
-    .content h2 {
+    h1 {
       color: #1b5e20;
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
     }
 
-    .content p, .content ul {
-      max-width: 800px;
-      margin: 0 auto 1.5rem auto;
-      font-size: 1.2rem;
+    .bairros, .taxas {
+      max-width: 700px;
+      margin: 1rem auto;
+      text-align: left;
+      font-size: 1.1rem;
       line-height: 1.6;
-    }
-
-    .glf-button {
-      background-color: orange;
-      color: white;
-      font-weight: bold;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 1rem;
-      font-size: 1rem;
-      cursor: pointer;
     }
 
     footer {
       background-color: #b30000;
       color: white;
-      padding: 1rem;
+      padding: 1.5rem;
       text-align: center;
     }
 
-    /* Botão WhatsApp fixo */
+    .glf-button {
+      display: inline-block;
+      margin: 1rem auto;
+      padding: 0.7rem 1.5rem;
+      background-color: #ff6600;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -109,13 +109,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 999;
     }
 
     .whatsapp-float img {
-      width: 35px;
-      height: 35px;
+      width: 32px;
+      height: 32px;
     }
 
     @media (max-width: 600px) {
@@ -127,6 +128,7 @@
       nav {
         justify-content: flex-start;
         flex-wrap: wrap;
+        margin-top: 0.5rem;
       }
     }
   </style>
@@ -144,48 +146,60 @@
     <nav>
       <a href="cardapio.html">Cardápio</a>
       <a href="entrega.html">Área de Entrega</a>
-      <a href="#" class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Ver Cardápio e Pedir</a>
+      <a class="highlight">
+        <span class="glf-button" 
+              data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+              data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+          Ver Cardápio e Pedir
+        </span>
+      </a>
       <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <div class="content">
-    <h2>Entrega de Comida em Porto Alegre</h2>
-    <p>Atendemos os seguintes bairros:</p>
-    <ul style="text-align:left; columns: 2; max-width: 800px; margin: 0 auto;">
-      <li>Auxiliadora</li><li>Azenha</li><li>Bela Vista</li><li>Boa Vista</li><li>Bom Fim</li>
-      <li>Bom Jesus</li><li>Centro Histórico</li><li>Chácara das Pedras</li><li>Cidade Baixa</li><li>Cristo Redentor</li>
-      <li>Farroupilha</li><li>Floresta</li><li>Higienópolis</li><li>Independência</li><li>Jardim Botânico</li>
-      <li>Jardim Carvalho</li><li>Jardim Floresta</li><li>Jardim Itu-Sabará</li><li>Jardim Dona Leopoldina</li><li>Jardim Lindoia</li>
-      <li>Jardim do Salso</li><li>Jardim São Pedro</li><li>Mário Quintana</li><li>Menino Deus</li><li>Moinhos de Vento</li>
-      <li>Mont'Serrat</li><li>Partenon</li><li>Passo d'Areia</li><li>Passo das Pedras</li><li>Petrópolis</li>
-      <li>Praia de Belas</li><li>Rio Branco</li><li>Rubem Berta</li><li>Santa Cecília</li><li>Santa Maria Goretti</li>
-      <li>Santana</li><li>Santo Antônio</li><li>São João</li><li>São Sebastião</li><li>Sarandi</li>
-      <li>Três Figueiras</li><li>Vila Ipiranga</li><li>Vila Jardim</li>
-    </ul>
+  <main>
+    <h1>Entrega de Comida em Porto Alegre</h1>
 
-    <p><strong>Taxa de entrega:</strong></p>
-    <ul style="list-style: none; padding: 0;">
-      <li><strong>Área 1</strong>: Mínimo R$ 45,00 — Taxa R$ 23,00</li>
-      <li><strong>Área 2</strong>: Mínimo R$ 45,00 — Taxa R$ 25,00</li>
-      <li><strong>Área 3</strong>: Mínimo R$ 45,00 — Taxa R$ 28,00</li>
-    </ul>
+    <div class="bairros">
+      <strong>Bairros atendidos:</strong><br>
+      Auxiliadora • Azenha • Bela Vista • Boa Vista • Bom Fim • Bom Jesus • Centro Histórico • Chácara das Pedras • Cidade Baixa • Cristo Redentor • Farroupilha • Floresta • Higienópolis • Independência • Jardim Botânico • Jardim Carvalho • Jardim Floresta • Jardim Itu-Sabará • Jardim Dona Leopoldina • Jardim Lindoia • Jardim do Salso • Jardim São Pedro • Mário Quintana • Menino Deus • Moinhos de Vento • Mont'Serrat • Partenon • Passo d'Areia • Passo das Pedras • Petrópolis • Praia de Belas • Rio Branco • Rubem Berta • Santa Cecília • Santa Maria Goretti • Santana • Santo Antônio • São João • São Sebastião • Sarandi • Três Figueiras • Vila Ipiranga • Vila Jardim
+    </div>
 
-    <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Ver Cardápio e Pedir</span>
-  </div>
+    <div class="taxas">
+      <strong>Taxas de entrega:</strong><br>
+      Área 1 — Mínimo: R$ 45,00 • Taxa: R$ 23,00<br>
+      Área 2 — Mínimo: R$ 45,00 • Taxa: R$ 25,00<br>
+      Área 3 — Mínimo: R$ 45,00 • Taxa: R$ 28,00
+    </div>
+
+    <div>
+      <span class="glf-button" 
+            data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+            data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+        Ver Cardápio e Pedir
+      </span>
+    </div>
+  </main>
 
   <footer>
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
+    <span class="glf-button" 
+          data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+          data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+      Ver Cardápio e Pedir
+    </span>
   </footer>
 
-  <!-- Botão flutuante do WhatsApp -->
-  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank" aria-label="Fale conosco no WhatsApp">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+  <!-- WhatsApp logo oficial -->
+  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
   </a>
 
-  <!-- Script do GlóriaFood -->
+  <!-- GlóriaFood Script -->
   <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+
 </body>
 </html>
+
 
 
