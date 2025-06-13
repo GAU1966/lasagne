@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lasagne</title>
+  <title>Contato - Lasagne</title>
   <style>
     body {
       margin: 0;
@@ -12,18 +12,10 @@
       color: #333;
     }
 
-    .bandeira {
-      display: flex;
-      height: 10px;
+    .faixa-tricolor {
+      height: 8px;
+      background: linear-gradient(to right, green 33.33%, white 33.33% 66.66%, red 66.66%);
     }
-
-    .bandeira div {
-      flex: 1;
-    }
-
-    .verde { background-color: #008000; }
-    .branco { background-color: #ffffff; }
-    .vermelho { background-color: #ff0000; }
 
     header {
       background-color: #b30000;
@@ -44,9 +36,10 @@
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
+      align-items: center;
     }
 
-    nav a, nav span.glf-button {
+    nav a {
       text-decoration: none;
       color: white;
       font-weight: bold;
@@ -54,60 +47,44 @@
       padding: 0.2rem 0.6rem;
       border-radius: 5px;
       font-size: 1rem;
-      cursor: pointer;
     }
 
-    nav span.glf-button {
+    .botao-laranja {
       background-color: orange;
-      border: 2px solid orange;
-    }
-
-    .intro {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .intro img {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    }
-
-    .intro p {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-top: 1rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    section {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .alma {
-      background-color: #1b5e20;
-      color: white;
-    }
-
-    .alma p {
-      font-size: 1.3rem;
-    }
-
-    .glf-button {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: orange;
-      color: white;
       border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
+      color: white;
       font-weight: bold;
-      cursor: pointer;
+      padding: 0.3rem 0.8rem;
+      border-radius: 5px;
       font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .botao-laranja:hover {
+      background-color: #e69500;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .email-link {
+      font-size: 1.4rem;
+      background-color: orange;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+
+    .email-link:hover {
+      background-color: #e69500;
     }
 
     footer {
@@ -115,6 +92,7 @@
       color: white;
       padding: 1rem;
       text-align: center;
+      margin-top: 3rem;
     }
 
     .whatsapp-float {
@@ -140,27 +118,18 @@
 </head>
 <body>
 
-  <div class="bandeira">
-    <div class="verde"></div>
-    <div class="branco"></div>
-    <div class="vermelho"></div>
-  </div>
+  <div class="faixa-tricolor"></div>
 
   <header>
     <h1>Lasagne</h1>
     <nav>
+      <a href="index.html">Início</a>
       <a href="cardapio.html">Cardápio</a>
       <a href="entrega.html">Área de Entrega</a>
-      <span class="glf-button"
-        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-        Ver Cardápio e Pedir
-      </span>
       <a href="contato.html">Contato</a>
+      <a class="botao-laranja" href="https://www.lasagne.com.br/cardapio" target="_blank">Ver Cardápio e Pedir</a>
     </nav>
   </header>
-
-
 
   <main>
     <h2>Fale com a gente!</h2>
@@ -175,206 +144,8 @@
   </footer>
 
   <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
   </a>
 
-  <!-- Script do GlóriaFood -->
-  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
-
-</body>
-</html>
-ewport" content="width=device-width, initial-scale=1.0">
-  <title>Lasagne</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #fdfdfd;
-      color: #333;
-    }
-
-    .bandeira {
-      display: flex;
-      height: 10px;
-    }
-
-    .bandeira div {
-      flex: 1;
-    }
-
-    .verde { background-color: #008000; }
-    .branco { background-color: #ffffff; }
-    .vermelho { background-color: #ff0000; }
-
-    header {
-      background-color: #b30000;
-      padding: 0.8rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    header h1 {
-      color: white;
-      font-size: 2rem;
-      margin: 0;
-    }
-
-    nav {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    nav a, nav span.glf-button {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      border: 2px solid white;
-      padding: 0.2rem 0.6rem;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    nav span.glf-button {
-      background-color: orange;
-      border: 2px solid orange;
-    }
-
-    .intro {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .intro img {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    }
-
-    .intro p {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-top: 1rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    section {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .alma {
-      background-color: #1b5e20;
-      color: white;
-    }
-
-    .alma p {
-      font-size: 1.3rem;
-    }
-
-    .glf-button {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: orange;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    footer {
-      background-color: #b30000;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      z-index: 999;
-    }
-
-    .whatsapp-float img {
-      width: 32px;
-      height: 32px;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="bandeira">
-    <div class="verde"></div>
-    <div class="branco"></div>
-    <div class="vermelho"></div>
-  </div>
-
-  <header>
-    <h1>Lasagne</h1>
-    <nav>
-      <a href="cardapio.html">Cardápio</a>
-      <a href="entrega.html">Área de Entrega</a>
-      <span class="glf-button"
-        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-        Ver Cardápio e Pedir
-      </span>
-      <a href="contato.html">Contato</a>
-    </nav>
-  </header>
-
-  <div class="intro">
-    <img src="lasanha.jpg" alt="Lasanha Artesanal e Deliciosa">
-  </div>
-  <main>
-    <h2>Fale com a gente!</h2>
-    <p>Quer fazer um pedido especial, tirar dúvidas ou mandar um elogio?</p>
-    <p>É só clicar no botão abaixo para nos mandar um e-mail.</p>
-
-    <a class="email-link" href="mailto:lasagne.br@gmail.com">Enviar e-mail para lasagne.br@gmail.com</a>
-  </main>
-
-  <section class="alma">
-    <h2>Feita à mão, com alma italiana</h2>
-    <p>
-      Do forno direto pra sua mesa — com ingredientes frescos, amor e aquele toque especial que só quem ama o que faz sabe oferecer.
-    </p>
-  </section>
-
-  <footer>
-    <p>© Lasagne.com.br — Artesanal e Deliciosa</p>
-    <span class="glf-button"
-      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-      Ver Cardápio e Pedir
-    </span>
-  </footer>
-
-  <!-- Botão flutuante do WhatsApp -->
- <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 32px; height: 32px;">
-</a>
-
-
-  <!-- Script GlóriaFood -->
-  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 </body>
 </html>
