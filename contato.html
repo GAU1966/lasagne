@@ -2,7 +2,177 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
+  <meta name="vi<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Lasagne</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    .faixa-tricolor {
+      height: 8px;
+      background: linear-gradient(to right, green 33.33%, white 33.33% 66.66%, red 66.66%);
+    }
+
+    header {
+      background-color: #b30000;
+      padding: 0.8rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border: 2px solid white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .botao-laranja {
+      background-color: orange;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 0.3rem 0.8rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .botao-laranja:hover {
+      background-color: #e69500;
+    }
+
+    /* Estilo idêntico ao dos botões do menu */
+    .glf-button {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border: 2px solid white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      line-height: normal;
+    }
+
+    .email-link {
+      font-size: 1.4rem;
+      background-color: orange;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+
+    .email-link:hover {
+      background-color: #e69500;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #b30000;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="faixa-tricolor"></div>
+
+  <header>
+    <a href="index.html" class="logo" style="font-family: 'Playfair Display', serif; font-size: 2rem; color: white; text-decoration: none; font-weight: bold;">Lasagne</a>
+    <nav>
+      <a href="cardapio.html">Cardápio</a>
+      <a href="entrega.html">Área de Entrega</a>
+      <span class="glf-button"
+        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+        Ver Cardápio e Pedir
+      </span>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Fale com a gente!</h2>
+    <p>Quer fazer um pedido especial, tirar dúvidas ou mandar um elogio?</p>
+    <p>É só clicar no botão abaixo para nos mandar um e-mail.</p>
+
+    <a class="email-link" href="mailto:lasagne.br@gmail.com">Enviar e-mail para lasagne.br@gmail.com</a>
+  </main>
+
+  <footer>
+    <p>© Lasagne.com.br — Artesanal e Deliciosa</p>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <!-- Script do GlóriaFood -->
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+
+</body>
+</html>
+ewport" content="width=device-width, initial-scale=1.0">
   <title>Lasagne</title>
   <style>
     body {
