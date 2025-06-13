@@ -1,76 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cardápio - Lasagne</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>Cardápio | Lasagne</title>
   <style>
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
       background-color: #fdfdfd;
-      color: #2e2e2e;
+      color: #333;
     }
+
+    .bandeira {
+      display: flex;
+      height: 10px;
+    }
+
+    .bandeira div {
+      flex: 1;
+    }
+
+    .verde { background-color: #008000; }
+    .branco { background-color: #ffffff; }
+    .vermelho { background-color: #ff0000; }
 
     header {
       background-color: #b30000;
-      padding: 1rem;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    header h1 {
-      margin: 0;
-      color: white;
-      font-size: 2.5rem;
-    }
-
-    nav {
-      margin-top: 0.5rem;
-    }
-
-    nav a, nav span.glf-button {
-      margin: 0 0.5rem;
+    .logo a {
+      font-size: 2rem;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      border: 2px solid white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 5px;
-      transition: background 0.3s;
-      display: inline-block;
     }
 
-    nav a:hover, nav span.glf-button:hover {
-      background-color: white;
-      color: #b30000;
-      cursor: pointer;
+    nav {
+      display: flex;
+      gap: 1rem;
     }
 
-    main {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    h2 {
-      color: #b30000;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    li {
-      background-color: #1b5e20;
+    nav .menu-link {
+      text-decoration: none;
       color: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
+      font-weight: bold;
+      padding: 0.4rem 0.8rem;
+      border: 2px solid white;
       border-radius: 5px;
+      font-size: 0.95rem;
+    }
+
+    nav .gloriafood-button {
+      background-color: #ff6600;
+      border-color: #ff6600;
+    }
+
+    section {
+      text-align: center;
+      padding: 2rem;
     }
 
     footer {
@@ -80,78 +73,83 @@
       text-align: center;
     }
 
-    .whatsapp-button {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background-color: white;
-      color: #b30000;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
+    /* GlóriaFood botão central extra (se desejar) */
     .glf-button {
       display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #1b5e20;
+      background-color: #ff6600;
       color: white;
-      border-radius: 5px;
       font-weight: bold;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+
+    /* WhatsApp fixo */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 100;
+    }
+
+    .whatsapp-float i {
+      margin-top: 15px;
     }
   </style>
+  <!-- Ícone oficial do WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
+  <div class="bandeira">
+    <div class="verde"></div>
+    <div class="branco"></div>
+    <div class="vermelho"></div>
+  </div>
+
   <header>
-    <h1>Lasagne</h1>
+    <div class="logo">
+      <a href="index.html">Lasagne</a>
+    </div>
     <nav>
-      <a href="index.html">Início</a>
-      <a href="cardapio.html">Cardápio</a>
-      <!-- Botão GlóriaFood no menu -->
-      <span class="glf-button"
-        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-        Ver cardápio e pedir
-      </span>
+      <a class="menu-link" href="cardapio.html">Cardápio</a>
+      <a class="menu-link" href="entrega.html">Área de Entrega</a>
+      <span class="menu-link gloriafood-button glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Ver Cardápio e Pedir</span>
     </nav>
   </header>
 
-  <main>
-    <!-- Botão GlóriaFood antes da frase "Nosso Cardápio" -->
-    <span class="glf-button"
-      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-      Ver cardápio e pedir
-    </span>
-
+  <section>
     <h2>Nosso Cardápio</h2>
-    <ul>
-      <li><strong>Da Nonna</strong><br>bolonhesa, bechamel, muçarela.</li>
-      <li><strong>Da Serra</strong><br>bolonhesa, presunto, bechamel, muçarela.</li>
-      <li><strong>Colonial</strong><br>frango com ervilha no molho de tomate, presunto, bechamel, muçarela.</li>
-      <li><strong>Brócolis</strong><br>brócolis, creme de ricota e parmesão, bechamel, muçarela.</li>
-      <li><strong>Filetto con Funghi e Salsa di Vino </strong><br>Escalopes de filé mignon, funghi secchi, bechamel,  molho de vinho, muçarela, parmesão</li>
-      <li><strong>Napoletana</strong><br>ragu napolitano, linguiça toscana, ovos cozidos, polpettine de carne, creme de ricota e parmesão, muçarela.</li>
-      <li><strong>Carbonara</strong><br>bacon, creme de queijos e ovos, muçarela.</li>
-    </ul>
-  </main>
+    <p>Aqui você encontra todas as nossas lasanhas artesanais feitas com carinho e tradição italiana.</p>
+
+    <!-- Outro botão central GlóriaFood se quiser -->
+    <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Ver Cardápio e Pedir</span>
+  </section>
 
   <footer>
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
-    <a class="whatsapp-button" href="https://wa.me/555185770342" target="_blank">Peça agora por WhatsApp</a><br>
-
-    <!-- Botão GlóriaFood no rodapé -->
-    <span class="glf-button"
-      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-      Ver cardápio e pedir
-    </span>
+    <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Ver Cardápio e Pedir</span>
   </footer>
 
-  <!-- Script GlóriaFood -->
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/555185770342" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Script do GlóriaFood -->
   <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
 </body>
 </html>
+
