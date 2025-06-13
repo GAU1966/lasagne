@@ -23,6 +23,7 @@
 
     .verde { background-color: #008000; }
     .branco { background-color: #ffffff; }
+    .vermelho { background-color: #ff0000; }
 
     header {
       background-color: #b30000;
@@ -61,31 +62,44 @@
       border: 2px solid orange;
     }
 
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1 {
+    .intro {
       text-align: center;
-      margin-bottom: 2rem;
+      padding: 2rem;
     }
 
-    .taxas {
-      font-size: 1.2rem;
-      line-height: 1.8;
+    .intro img {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
     }
 
-    .taxas strong {
-      display: block;
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
+    .intro p {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .alma {
+      background-color: #1b5e20;
+      color: white;
+    }
+
+    .alma p {
+      font-size: 1.3rem;
     }
 
     .glf-button {
       display: inline-block;
-      margin-top: 2rem;
+      margin-top: 1rem;
       background-color: orange;
       color: white;
       border: none;
@@ -97,7 +111,7 @@
     }
 
     footer {
-      background-color: #008000;
+      background-color: #008000; /* Agora verde */
       color: white;
       padding: 1rem;
       text-align: center;
@@ -129,7 +143,7 @@
   <div class="bandeira">
     <div class="verde"></div>
     <div class="branco"></div>
-    <div class="verde"></div>
+    <div class="vermelho"></div>
   </div>
 
   <header>
@@ -148,44 +162,41 @@
   <main>
     <h1>Áreas de Entrega em Porto Alegre</h1>
 
-    <div class="taxas">
-      <strong>Taxas de entrega:</strong>
-      <p><strong>Área 1</strong> — Pedido Mínimo: R$ 35,00 • Taxa: R$ 20,00<br>
-      • Auxiliadora • Bom Fim • Bom Jesus • Centro Histórico • Chácara das Pedras • Cidade Baixa • Cristo Redentor • Farroupilha • Petrópolis • Jardim Botânico • Jardim Carvalho • Jardim Itu-Sabará • Jardim Dona Leopoldina • Jardim do Salso • Mário Quintana • Passo das Pedras • Santa Cecília • Três Figueiras • Vila Ipiranga • Vila Jardim</p>
+    <div class="taxas" style="padding: 1.5rem; max-width: 800px; margin: auto; font-size: 1.1rem; line-height: 1.6;">
+      <p><strong>Taxas de entrega:</strong></p>
 
-      <p><strong>Área 2</strong> — Pedido Mínimo: R$ 35,00 • Taxa: R$ 23,00<br>
+      <p><strong>Área 1 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 20,00</strong><br>
+      • Auxiliadora • Bom Fim • Bom Jesus • Centro Histórico • Chácara das Pedras • Cidade Baixa • Cristo Redentor • Farroupilha • Petrópolis • Jardim Botânico • Jardim Carvalho • Jardim Itu-Sabará • Jardim Dona Leopoldina • Jardim do Salso • Mário Quintana • Passo das Pedras • Santa Cecilia • Três Figueiras • Vila Ipiranga • Vila Jardim</p>
+
+      <p><strong>Área 2 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 23,00</strong><br>
       • Bela Vista • Boa Vista • Independência • Floresta • Jardim Floresta • Jardim Lindoia • Jardim São Pedro • Higienópolis • Moinhos de Vento • Mont'Serrat • Passo d'Areia • Rio Branco • Rubem Berta • São João • São Sebastião • Sarandi</p>
 
-      <p><strong>Área 3</strong> — Pedido Mínimo: R$ 35,00 • Taxa: R$ 25,00<br>
+      <p><strong>Área 3 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 25,00</strong><br>
       • Azenha • Glória • Menino Deus • Nonoai • Partenon • Praia de Belas • Santa Maria Goretti • Santa Tereza • Santana • Santo Antônio • Teresópolis</p>
 
-      <p><strong>Área 4</strong> — Pedido Mínimo: R$ 35,00 • Taxa: R$ 30,00<br>
+      <p><strong>Área 4 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 30,00</strong><br>
       • Cavalhada • Camaquã • Vila Assunção • Vila Conceição • Sétimo Céu • Tristeza</p>
 
-      <p><strong>Área 5</strong> — Pedido Mínimo: R$ 35,00 • Taxa: R$ 35,00<br>
-      • Aberta Morros • Campo Novo • Espírito Santo • Guarujá • Hípica • Ipanema • Jardim Isabel • Vila Nova • Serraria</p>
-
-      <span class="glf-button"
-        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-        Ver Cardápio e Pedir
-      </span>
+      <p><strong>Área 5 — Pedido Mínimo: R$ 35,00 • Taxa: R$ 35,00</strong><br>
+      • Aberta dos Morros • Campo Novo • Espírito Santo • Guarujá • Hípica • Ipanema • Jardim Isabel • Vila Nova • Serraria</p>
     </div>
   </main>
 
   <footer>
     <p>© Lasagne.com.br — Artesanal e Deliciosa</p>
-    <span class="glf-button"
-      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+    <span class="glf-button" 
+          data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+          data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
       Ver Cardápio e Pedir
     </span>
   </footer>
 
+  <!-- WhatsApp logo oficial -->
   <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 32px; height: 32px;">
   </a>
 
+  <!-- GlóriaFood Script -->
   <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
 </body>
