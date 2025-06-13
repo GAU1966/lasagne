@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lasagne</title>
+  <title>Contato - Lasagne</title>
   <style>
     body {
       margin: 0;
@@ -11,19 +11,6 @@
       background-color: #fdfdfd;
       color: #333;
     }
-
-    .bandeira {
-      display: flex;
-      height: 10px;
-    }
-
-    .bandeira div {
-      flex: 1;
-    }
-
-    .verde { background-color: #008000; }
-    .branco { background-color: #ffffff; }
-    .vermelho { background-color: #ff0000; }
 
     header {
       background-color: #b30000;
@@ -46,7 +33,7 @@
       flex-wrap: wrap;
     }
 
-    nav a, nav span.glf-button {
+    nav a {
       text-decoration: none;
       color: white;
       font-weight: bold;
@@ -54,60 +41,29 @@
       padding: 0.2rem 0.6rem;
       border-radius: 5px;
       font-size: 1rem;
-      cursor: pointer;
     }
 
-    nav span.glf-button {
-      background-color: orange;
-      border: 2px solid orange;
-    }
-
-    .intro {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .intro img {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    }
-
-    .intro p {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-top: 1rem;
+    main {
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    section {
+      margin: 3rem auto;
+      padding: 1rem;
       text-align: center;
-      padding: 2rem;
     }
 
-    .alma {
-      background-color: #1b5e20;
-      color: white;
-    }
-
-    .alma p {
-      font-size: 1.3rem;
-    }
-
-    .glf-button {
-      display: inline-block;
-      margin-top: 1rem;
+    .email-link {
+      font-size: 1.4rem;
       background-color: orange;
       color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
       font-weight: bold;
-      cursor: pointer;
-      font-size: 1rem;
+    }
+
+    .email-link:hover {
+      background-color: #e69500;
     }
 
     footer {
@@ -115,6 +71,7 @@
       color: white;
       padding: 1rem;
       text-align: center;
+      margin-top: 3rem;
     }
 
     .whatsapp-float {
@@ -140,22 +97,13 @@
 </head>
 <body>
 
-  <div class="bandeira">
-    <div class="verde"></div>
-    <div class="branco"></div>
-    <div class="vermelho"></div>
-  </div>
-
   <header>
-    <a href="index.html" class="logo" style="font-family: 'Playfair Display', serif; font-size: 2rem; color: white; text-decoration: none; font-weight: bold;">Lasagne</a>
+    <h1>Lasagne</h1>
     <nav>
+      <a href="index.html">Início</a>
       <a href="cardapio.html">Cardápio</a>
-      <span class="glf-button"
-        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-        Ver Cardápio e Pedir
-      </span>
-      <a href="#">Contato</a>
+      <a href="entrega.html">Área de Entrega</a>
+      <a href="contato.html">Contato</a>
     </nav>
   </header>
 
@@ -171,11 +119,9 @@
     <p>© Lasagne.com.br — Artesanal e Deliciosa</p>
   </footer>
 
- <!-- Botão flutuante do WhatsApp -->
-<a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 32px; height: 32px;">
-</a>
-
+  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
 
 </body>
 </html>
