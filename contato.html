@@ -36,6 +36,7 @@
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     nav a {
@@ -46,6 +47,21 @@
       padding: 0.2rem 0.6rem;
       border-radius: 5px;
       font-size: 1rem;
+    }
+
+    .botao-laranja {
+      background-color: orange;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 0.3rem 0.8rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .botao-laranja:hover {
+      background-color: #e69500;
     }
 
     main {
@@ -104,18 +120,14 @@
 
   <div class="faixa-tricolor"></div>
 
- <header>
+  <header>
     <h1>Lasagne</h1>
     <nav>
       <a href="index.html">Início</a>
       <a href="cardapio.html">Cardápio</a>
       <a href="entrega.html">Área de Entrega</a>
       <a href="contato.html">Contato</a>
-      <span class="glf-button"
-        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-        Ver Cardápio e Pedir
-      </span>
+      <a class="botao-laranja" href="cardapio.html">Ver Cardápio e Pedir</a>
     </nav>
   </header>
 
@@ -134,7 +146,6 @@
   <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
   </a>
-<!-- Script GlóriaFood -->
-  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+
 </body>
 </html>
