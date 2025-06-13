@@ -27,34 +27,49 @@
 
     header {
       background-color: #b30000;
-      padding: 1rem;
+      padding: 1rem 2rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
 
-    header h1 {
+    .logo {
+      font-size: 2.2rem;
+      font-weight: bold;
       color: white;
-      font-size: 2rem;
-      margin: 0;
     }
 
     nav {
       display: flex;
-      gap: 0.8rem;
+      gap: 1rem;
       flex-wrap: wrap;
     }
 
-    nav a, .glf-button {
+    nav a {
       text-decoration: none;
       color: white;
       font-weight: bold;
       border: 2px solid white;
       padding: 0.4rem 0.8rem;
       border-radius: 5px;
-      background-color: orange;
+    }
+
+    .glf-button {
+      display: inline-block;
+      background-color: #ff6600;
+      color: white !important;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      text-decoration: none;
       cursor: pointer;
+      border: none;
+    }
+
+    .glf-button:hover {
+      background-color: #e65500;
     }
 
     .intro {
@@ -97,25 +112,29 @@
 
     .whatsapp-float {
       position: fixed;
-      width: 60px;
-      height: 60px;
       bottom: 20px;
       right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      z-index: 1000;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 999;
     }
 
-    .whatsapp-float i {
-      margin-top: 15px;
+    .whatsapp-float a {
+      background-color: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      text-decoration: none;
+    }
+
+    .whatsapp-float img {
+      width: 28px;
+      height: 28px;
     }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 </head>
 <body>
 
@@ -126,12 +145,16 @@
   </div>
 
   <header>
-    <h1>Lasagne</h1>
+    <div class="logo">Lasagne</div>
     <nav>
       <a href="cardapio.html">Cardápio</a>
       <a href="#">Área de Entrega</a>
-      <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Peça Agora!</span>
       <a href="#">Contato</a>
+      <span class="glf-button"
+        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+        Ver Cardápio e Pedir
+      </span>
     </nav>
   </header>
 
@@ -141,12 +164,16 @@
 
   <section>
     <h2 style="font-size: 2rem; color: #1b5e20;">Benvenuti alla Lasagne</h2>
+
+    <span class="glf-button"
+      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+      Ver Cardápio e Pedir
+    </span>
+
     <p>
       Cada fatia da nossa lasanha é feita com carinho, camadas de tradição e generosidade.
     </p>
-    <div style="margin-top: 1rem;">
-      <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Peça Agora!</span>
-    </div>
   </section>
 
   <section class="alma">
@@ -158,14 +185,20 @@
 
   <footer>
     <p>© Lasagne.com.br — artesanal e deliciosa</p>
-    <div style="margin-top: 1rem;">
-      <span class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Peça Agora!</span>
-    </div>
+
+    <span class="glf-button"
+      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+      Ver Cardápio e Pedir
+    </span>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+  <div class="whatsapp-float">
+    <a href="https://wa.me/555185770342" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+  </div>
 
+  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 </body>
 </html>
