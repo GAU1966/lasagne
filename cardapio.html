@@ -152,16 +152,52 @@
       margin-left: 1rem;
       border-radius: 8px;
     }
- 
+ .topo-fixo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.bandeira {
+  display: flex;
+  height: 10px;
+}
+
+.bandeira div {
+  flex: 1;
+}
+
+header {
+  background-color: #b30000;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+body {
+  margin: 0;
+  padding-top: 90px; /* espaço suficiente para faixa + menu */
+}
+
   </style>
 </head>
 <body>
 
+ <div class="topo-fixo">
   <div class="bandeira">
     <div class="verde"></div>
     <div class="branco"></div>
     <div class="vermelho"></div>
   </div>
+
+  <header>
+    ...
+  </header>
+</div>
 
   <header>
     <a href="index.html" class="logo" style="font-family: 'Playfair Display', serif; font-size: 2rem; color: white; text-decoration: none; font-weight: bold;">Lasagne</a>
