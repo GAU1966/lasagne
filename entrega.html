@@ -1,169 +1,164 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Área de Entrega | Lasagne</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Entrega – Lasagne</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background-color: #fff;
+      font-family: 'Playfair Display', serif;
+      background-color: #fdfdfd;
       color: #333;
     }
 
-    header {
-      background-color: #fff;
-      padding: 20px;
+    .bandeira {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      height: 10px;
     }
 
-    .logo {
-      font-weight: 700;
-      font-size: 1.6rem;
-      color: #000;
-      text-decoration: none;
+    .bandeira div { flex: 1; }
+    .verde { background-color: #008000; }
+    .branco { background-color: #ffffff; }
+    .vermelho { background-color: #ff0000; }
+
+    header {
+      background-color: #b30000;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2rem;
+      margin: 0;
+      cursor: pointer;
     }
 
     nav a {
-      margin-left: 20px;
+      margin-left: 1rem;
       text-decoration: none;
-      color: #000;
-      font-weight: 500;
-      font-size: 1rem;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: background-color 0.2s ease;
-    }
-
-    nav a:hover {
-      background-color: #f2f2f2;
+      color: white;
+      font-weight: bold;
+      border: 2px solid white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.95rem;
     }
 
     main {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h1, h2 {
-      color: #D35400;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      padding: 2rem;
+      text-align: center;
     }
 
     h2 {
-      margin-top: 40px;
-      font-size: 1.4rem;
+      color: #1b5e20;
+      font-size: 1.8rem;
     }
 
-    ul {
-      column-count: 2;
-      list-style: none;
-      padding: 0;
-      margin-top: 10px;
-    }
-
-    ul li::before {
-      content: "🍝 ";
-      margin-right: 5px;
-    }
-
-    table {
-      margin-top: 20px;
-      border-collapse: collapse;
-      width: 100%;
-    }
-
-    table th, table td {
-      border: 1px solid #ddd;
-      padding: 10px;
+    .bairros {
+      columns: 2;
+      max-width: 800px;
+      margin: 2rem auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
       text-align: left;
     }
 
-    table th {
-      background-color: #f9f9f9;
+    table {
+      margin: 2rem auto;
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 600px;
     }
 
-    footer {
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.8rem;
       text-align: center;
-      padding: 30px 20px;
-      color: #999;
-      font-size: 0.9rem;
     }
 
-    /* WhatsApp botão fixo */
-    .whatsapp-fixo {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-    }
-
-    .whatsapp-fixo img {
-      width: 60px;
-      height: 60px;
+    th {
+      background-color: #f0f0f0;
     }
 
     .glf-button {
-      background-color: #D35400;
-      color: white !important;
-      padding: 8px 16px;
-      border-radius: 4px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.3s ease;
+      display: inline-block;
+      margin: 2rem auto;
+      padding: 0.8rem 1.6rem;
+      background-color: #ff6600;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
     }
 
-    .glf-button:hover {
-      background-color: #a63e00;
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .whatsapp-button img {
+      width: 30px;
+      height: 30px;
+    }
+
+    footer {
+      background-color: #b30000;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
+  <div class="bandeira">
+    <div class="verde"></div>
+    <div class="branco"></div>
+    <div class="vermelho"></div>
+  </div>
+
   <header>
-    <a href="index.html" class="logo">Lasagne</a>
+    <h1 onclick="location.href='index.html'">Lasagne</h1>
     <nav>
       <a href="cardapio.html">Cardápio</a>
-      <a href="area-de-entrega.html">Área de Entrega</a>
-      <a href="#" class="glf-button" data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278" data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">Ver Cardápio e Pedir</a>
+      <a href="area.html">Área de Entrega</a>
       <a href="contato.html">Contato</a>
+      <a class="glf-button" style="background-color: #ff6600; border: none;" 
+         data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+         data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+         Ver Cardápio e Pedir
+      </a>
     </nav>
   </header>
 
   <main>
-    <h1>Área de Entrega</h1>
-    <p>Entregamos com carinho e pontualidade em diversos bairros de Porto Alegre.</p>
+    <h2>Entrega de Comida em Porto Alegre</h2>
 
-    <h2>Bairros atendidos</h2>
-    <ul>
-      <li>Auxiliadora</li><li>Azenha</li><li>Bela Vista</li><li>Boa Vista</li><li>Bom Fim</li><li>Bom Jesus</li>
-      <li>Centro Histórico</li><li>Chácara das Pedras</li><li>Cidade Baixa</li><li>Cristo Redentor</li><li>Farroupilha</li>
-      <li>Floresta</li><li>Higienópolis</li><li>Independência</li><li>Jardim Botânico</li><li>Jardim Carvalho</li>
-      <li>Jardim Floresta</li><li>Jardim Itu-Sabará</li><li>Jardim Dona Leopoldina</li><li>Jardim Lindoia</li>
-      <li>Jardim do Salso</li><li>Jardim São Pedro</li><li>Mário Quintana</li><li>Menino Deus</li>
-      <li>Moinhos de Vento</li><li>Mont'Serrat</li><li>Partenon</li><li>Passo d'Areia</li><li>Passo das Pedras</li>
-      <li>Petrópolis</li><li>Praia de Belas</li><li>Rio Branco</li><li>Rubem Berta</li><li>Santa Cecília</li>
-      <li>Santa Maria Goretti</li><li>Santana</li><li>Santo Antônio</li><li>São João</li><li>São Sebastião</li>
-      <li>Sarandi</li><li>Três Figueiras</li><li>Vila Ipiranga</li><li>Vila Jardim</li>
-    </ul>
+    <div class="bairros">
+      Auxiliadora • Azenha • Bela Vista • Boa Vista • Bom Fim • Bom Jesus • Centro Histórico • Chácara das Pedras • Cidade Baixa • Cristo Redentor • Farroupilha • Floresta • Higienópolis • Independência • Jardim Botânico • Jardim Carvalho • Jardim Floresta • Jardim Itu-Sabará • Jardim Dona Leopoldina • Jardim Lindoia • Jardim do Salso • Jardim São Pedro • Mário Quintana • Menino Deus • Moinhos de Vento • Mont'Serrat • Partenon • Passo d'Areia • Passo das Pedras • Petrópolis • Praia de Belas • Rio Branco • Rubem Berta • Santa Cecília • Santa Maria Goretti • Santana • Santo Antônio • São João • São Sebastião • Sarandi • Três Figueiras • Vila Ipiranga • Vila Jardim
+    </div>
 
-    <h2>Taxa de entrega</h2>
     <table>
       <thead>
         <tr>
           <th>Área</th>
-          <th>Pedido Mínimo</th>
+          <th>Mínimo</th>
           <th>Taxa</th>
         </tr>
       </thead>
@@ -186,22 +181,24 @@
       </tbody>
     </table>
 
-    <p style="margin-top: 20px;">Se tiver dúvidas sobre seu bairro ou a taxa de entrega, fale conosco pelo WhatsApp.</p>
+    <span class="glf-button"
+      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+      Ver Cardápio e Pedir
+    </span>
   </main>
 
   <footer>
-    &copy; 2025 Lasagne. Todos os direitos reservados.
+    <p>© Lasagne.com.br — artesanal e deliciosa</p>
   </footer>
 
-  <!-- WhatsApp fixo -->
-  <a href="https://wa.me/555185770342" class="whatsapp-fixo" target="_blank" aria-label="WhatsApp">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+  <a class="whatsapp-button" href="https://wa.me/555185770342" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
   </a>
 
-  <!-- Script GlóriaFood -->
   <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
-
 </body>
 </html>
+
 
 
