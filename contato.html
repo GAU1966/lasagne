@@ -39,7 +39,32 @@
       align-items: center;
     }
 
-    nav a,
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border: 2px solid white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .botao-laranja {
+      background-color: orange;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 0.3rem 0.8rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+
+    .botao-laranja:hover {
+      background-color: #e69500;
+    }
+
+    /* Ajuste apenas no botão Ver Cardápio e Pedir */
     .glf-button {
       text-decoration: none;
       color: white;
@@ -48,19 +73,7 @@
       padding: 0.2rem 0.6rem;
       border-radius: 5px;
       font-size: 1rem;
-      background-color: orange;
       cursor: pointer;
-    }
-
-    .glf-button:hover {
-      background-color: #e69500;
-    }
-
-    main {
-      max-width: 600px;
-      margin: 3rem auto;
-      padding: 1rem;
-      text-align: center;
     }
 
     .email-link {
@@ -77,6 +90,13 @@
 
     .email-link:hover {
       background-color: #e69500;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 1rem;
+      text-align: center;
     }
 
     footer {
