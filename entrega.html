@@ -136,6 +136,25 @@
       width: 32px;
       height: 32px;
     }
+.bandeira, header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.bandeira {
+  top: 0;
+}
+
+header {
+  top: 10px; /* logo abaixo da bandeira */
+}
+
+body {
+  padding-top: 90px; /* espaço reservado para a bandeira + header */
+}
+
   </style>
 </head>
 <body>
