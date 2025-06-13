@@ -1,205 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lasagne</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #fdfdfd;
-      color: #333;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lasagne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .bandeira {
-      display: flex;
-      height: 10px;
-    }
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #fff9f4;
+        color: #4a2c2a;
+      }
 
-    .bandeira div {
-      flex: 1;
-    }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff9f4;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      }
 
-    .verde { background-color: #008000; }
-    .branco { background-color: #ffffff; }
-    .vermelho { background-color: #ff0000; }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #4a2c2a;
+      }
 
-    header {
-      background-color: #b30000;
-      padding: 0.8rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+      nav {
+        display: flex;
+        gap: 10px;
+      }
 
-    header h1 {
-      color: white;
-      font-size: 2rem;
-      margin: 0;
-    }
+      nav a {
+        text-decoration: none;
+        color: #4a2c2a;
+        padding: 6px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        font-weight: 500;
+      }
 
-    nav {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
+      nav a:hover {
+        background-color: #fde2b9;
+      }
 
-    nav a, nav span.glf-button {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      border: 2px solid white;
-      padding: 0.2rem 0.6rem;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
+      .highlight {
+        background-color: #f97316;
+        color: white !important;
+      }
 
-    nav span.glf-button {
-      background-color: orange;
-      border: 2px solid orange;
-    }
+      .hero {
+        text-align: center;
+        padding: 60px 20px;
+      }
 
-    .intro {
-      text-align: center;
-      padding: 2rem;
-    }
+      .hero img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
 
-    .intro img {
-      width: 100%;
-      max-width: 720px;
-      border-radius: 16px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    }
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #4a2c2a;
+      }
 
-    .intro p {
-      font-size: 1.6rem;
-      font-weight: 500;
-      margin-top: 1rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+      .hero p {
+        font-size: 1.2rem;
+        color: #7b4f4a;
+        margin-bottom: 20px;
+      }
 
-    section {
-      text-align: center;
-      padding: 2rem;
-    }
+      .glf-button {
+        display: inline-block;
+        background-color: #f97316;
+        color: white;
+        padding: 12px 24px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 10px;
+      }
 
-    .alma {
-      background-color: #1b5e20;
-      color: white;
-    }
+      footer {
+        text-align: center;
+        padding: 30px 20px;
+        background-color: #fff1e5;
+        margin-top: 40px;
+      }
 
-    .alma p {
-      font-size: 1.3rem;
-    }
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 100;
+      }
 
-    .glf-button {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: orange;
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+      .whatsapp-float i {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Lasagne</div>
+      <nav>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#entrega">Área de Entrega</a>
+        <a href="#gloriafood" class="highlight">Ver Cardápio e Pedir</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
 
-    footer {
-      background-color: #b30000;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
+    <section class="hero">
+      <img src="lasanha.jpg" alt="Lasanha artesanal deliciosa" />
+      <h1>Benvenuti</h1>
+      <p style="font-size: 1.4rem; font-weight: bold;">Cada fatia é feita à mão com ingredientes selecionados.</p>
+      <p style="font-size: 1.2rem;">Direto do forno para a sua mesa, com aquele sabor que abraça.</p>
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      z-index: 999;
-    }
+      <div id="gloriafood">
+        <span
+          class="glf-button"
+          data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+          data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702"
+        >Ver Cardápio e Pedir</span>
+      </div>
+    </section>
 
-    .whatsapp-float img {
-      width: 32px;
-      height: 32px;
-    }
-  </style>
-</head>
-<body>
+    <footer>
+      <p>&copy; 2025 Lasagne. Todos os direitos reservados.</p>
+      <div>
+        <span
+          class="glf-button"
+          data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+          data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702"
+        >Ver Cardápio e Pedir</span>
+      </div>
+    </footer>
 
-  <div class="bandeira">
-    <div class="verde"></div>
-    <div class="branco"></div>
-    <div class="vermelho"></div>
-  </div>
+    <!-- WhatsApp flutuante -->
+    <a href="https://wa.me/555185770342" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <header>
-    <h1>Lasagne</h1>
-    <nav>
-      <a href="cardapio.html">Cardápio</a>
-      <a href="#">Área de Entrega</a>
-      <span class="glf-button"
-        data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-        data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-        Ver Cardápio e Pedir
-      </span>
-      <a href="#">Contato</a>
-    </nav>
-  </header>
-
-  <div class="intro">
-    <img src="lasanha.jpg" alt="Lasanha artesanal deliciosa">
-  </div>
-
-  <section>
-    <h2 style="font-size: 2rem; color: #1b5e20;">Benvenuti alla Lasagne</h2>
-    <p style="font-size: 1.6rem; font-weight: 500;">
-      Cada fatia da nossa lasanha é feita com carinho, camadas de tradição e generosidade.
-    </p>
-    <span class="glf-button"
-      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-      Ver Cardápio e Pedir
-    </span>
-  </section>
-
-  <section class="alma">
-    <h2>Feita à mão, com alma italiana</h2>
-    <p>
-      Do forno direto pra sua mesa — com ingredientes frescos, amor e aquele toque especial que só quem ama o que faz sabe oferecer.
-    </p>
-  </section>
-
-  <footer>
-    <p>© Lasagne.com.br — artesanal e deliciosa</p>
-    <span class="glf-button"
-      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-      Ver Cardápio e Pedir
-    </span>
-  </footer>
-
-  <!-- Botão flutuante do WhatsApp -->
-  <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-  </a>
-
-  <!-- Script GlóriaFood -->
-  <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
-</body>
+    <!-- Script do GlóriaFood -->
+    <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
+  </body>
 </html>
 
 
