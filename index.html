@@ -170,43 +170,7 @@ body {
   cursor: pointer;
 }
  
-.carousel {
-  position: relative;
-  width: 100%;
-  max-width: 400px;       /* ajuste a largura máxima */
-  height: 400px;          /* ajuste a altura do carrossel */
-  margin: 0rem auto;      /* espaço acima e abaixo */
-  overflow: hidden;
-  border-radius: 16px;    /* arredondamento opcional */
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);  /* sombra opcional */
-}
 
-.carousel-container {
-  display: flex;
-  width: 300%; /* depende do número de imagens */
-  height: 100%;
-  animation: slide 15s infinite;
-}
-
-.carousel-slide {
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  object-fit: cover;      /* cobre o espaço sem distorcer */
-  margin: 0;              /* sem margem entre as imagens */
-  border: none;           /* sem borda */
-}
-
-@keyframes slide {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(0); }
-  25% { transform: translateX(-100%); }
-  45% { transform: translateX(-100%); }
-  50% { transform: translateX(-200%); }
-  70% { transform: translateX(-200%); }
-  75% { transform: translateX(0); }
-  100% { transform: translateX(0); }
-}
   </style>
 </head>
 <body>
@@ -232,14 +196,11 @@ body {
   </nav>
 </header>
   
-
-<div class="intro carousel">
-  <div class="carousel-container">
-    <img src="nonna.png" alt="Lasanha Artesanal 1" class="carousel-slide active">
-    <img src="brocoli.png" alt="Lasanha Artesanal 2" class="carousel-slide">
-    <img src="allanorma.png" alt="Lasanha Artesanal 3" class="carousel-slide">
+ <div class="intro">
+    <img src="lasanha.jpg" alt="Lasanha Artesanal e Deliciosa">
   </div>
-</div>
+
+
 
   <section>
     <h2 style="font-size: 2rem; color: #1b5e20;">Benvenuti alla Lasagne</h2>
