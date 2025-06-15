@@ -170,26 +170,31 @@ body {
   cursor: pointer;
 }
  
-  .carousel {
+.carousel {
   position: relative;
   width: 100%;
-  max-width: 720px;
-  margin: auto;
+  max-width: 720px;       /* ajuste a largura máxima */
+  height: 400px;          /* ajuste a altura do carrossel */
+  margin: 2rem auto;      /* espaço acima e abaixo */
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;    /* arredondamento opcional */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);  /* sombra opcional */
 }
 
 .carousel-container {
   display: flex;
-  width: 300%;
+  width: 300%; /* depende do número de imagens */
+  height: 100%;
   animation: slide 15s infinite;
 }
 
 .carousel-slide {
   width: 100%;
+  height: 100%;
   flex-shrink: 0;
-  object-fit: cover;
+  object-fit: cover;      /* cobre o espaço sem distorcer */
+  margin: 0;              /* sem margem entre as imagens */
+  border: none;           /* sem borda */
 }
 
 @keyframes slide {
