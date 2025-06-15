@@ -170,7 +170,21 @@ header {
 body {
   padding-top: 150px; /* espaço reservado para a bandeira + header */
 }
-
+.bottom-bar-cardapio {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 500; /* menor que o WhatsApp (z-index: 999) */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
@@ -274,25 +288,27 @@ body {
     </div>
      
     <!-- Adicione aqui os outros itens seguindo o mesmo modelo acima -->
-<span class="glf-button"
-      data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
-      data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
-      Ver Cardápio e Pedir
-    </span>
+
   </section>
 
-  <footer>
-     
-    <p>© Lasagne.com.br — Artesanal e Deliciosa</p>
-  <p>
+ <footer>
+  <p>© Lasagne.com.br — Artesanal e Deliciosa</p>
+  <p style="margin-bottom: 4rem;">
     <a href="https://www.instagram.com/lasagne_delivery" target="_blank">
       <img src="insta.png" alt="Instagram" style="width: 32px; height: 32px;">
     </a>
-  </p> </footer>
-
+  </p>
+</footer>
+  
   <a class="whatsapp-float" href="https://wa.me/555185770342" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
+
+<a class="bottom-bar-cardapio"
+   data-glf-cuid="09af33e7-290d-4882-8555-0a3455715278"
+   data-glf-ruid="8b92d270-f6ba-4ea3-8c1b-24461d1eb702">
+   Ver Cardápio e Pedir
+</a>
 
   <script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async></script>
 
