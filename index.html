@@ -196,18 +196,17 @@ body {
   </nav>
 </header>
   
- <div class="intro">
+<div class="intro">
   <div class="carousel">
-    <img src="lasanha.jpg" alt="Slide 1" class="active">
-    <img src="napoletana.png" alt="Slide 2">
-    <img src="slide3.jpg" alt="Slide 3">
+    <img src="lasanha.jpg" class="carousel-image active" alt="Slide 1">
+    <img src="carbonara.png" class="carousel-image" alt="Slide 2">
+    <img src="slide3.jpg" class="carousel-image" alt="Slide 3">
   </div>
 </div>
 
 <style>
   .carousel {
     position: relative;
-    width: 100%;
     max-width: 720px;
     margin: 0 auto;
     border-radius: 16px;
@@ -215,34 +214,32 @@ body {
     box-shadow: 0 0 12px rgba(0,0,0,0.2);
   }
 
-  .carousel img {
+  .carousel-image {
     width: 100%;
     height: auto;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
   }
 
-  .carousel img.active {
+  .carousel-image.active {
     opacity: 1;
-    z-index: 1;
+    position: relative;
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const slides = document.querySelectorAll('.carousel img');
-    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-image');
+    let current = 0;
 
-    function showNextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-
-    setInterval(showNextSlide, 4000);
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
   });
 </script>
 
